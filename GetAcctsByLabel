@@ -7,7 +7,6 @@ function getAccountsByLabel() {
   while (accountIterator.hasNext()) {
     var account = accountIterator.next();
     var accountName = account.getName() ? account.getName() : '--';
-    Logger.log('%s,%s,%s,%s', account.getCustomerId(), accountName,
-        account.getTimeZone(), account.getCurrencyCode());
+    Logger.log('%s,%s, account.getCustomerId(), accountName);
   }
 }

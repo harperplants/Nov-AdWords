@@ -1,0 +1,13 @@
+function getAccountsByLabel() {
+  // Only CONTAINS and DOES_NOT_CONTAIN operators are supported.
+  var accountIterator = MccApp.accounts()
+      .withCondition("LabelNames CONTAINS 'NASHVL'")
+      .get();
+
+  while (accountIterator.hasNext()) {
+    var account = accountIterator.next();
+    var accountName = account.getName() ? account.getName() : '--';
+    Logger.log('%s,%s,%s,%s', account.getCustomerId(), accountName,
+        account.getTimeZone(), account.getCurrencyCode());
+  }
+}

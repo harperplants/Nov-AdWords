@@ -1,4 +1,5 @@
-function getAccountsByLabel() {
+function main () {
+//getAccountsByLabel
   // Only CONTAINS and DOES_NOT_CONTAIN operators are supported.
   var accountIterator = MccApp.accounts()
       .withCondition("LabelNames CONTAINS 'NASHVL'")
